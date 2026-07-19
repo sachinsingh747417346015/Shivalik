@@ -1,312 +1,830 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivalik Elevators</title>
-
+    <title>Shivalik Elevators - Safe • Reliable • Premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family: Arial, Helvetica, sans-serif;
+        :root {
+            --primary-blue: #0f3057;   /* Deep and premium royal blue */
+            --accent-yellow: #ffc93c;  /* Bright and attractive premium yellow */
+            --light-blue: #e7f0ff;     /* Light blue for section backgrounds */
+            --text-dark: #222831;
+            --text-light: #ffffff;
+            --bg-light: #f9fbfd;
+            --card-bg: #ffffff;
         }
 
-        body{
-            line-height:1.6;
-            color:#333;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
         }
 
-        .container{
-            width:90%;
-            max-width:1200px;
-            margin:auto;
+        body {
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
         }
 
-        /* Header */
-        header{
-            background:#0d2b52;
-            color:#fff;
-            padding:15px 0;
-            position:sticky;
-            top:0;
-            z-index:999;
+        /* Top Bar */
+        .top-bar {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            padding: 10px 5%;
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.9rem;
+            flex-wrap: wrap;
+            border-bottom: 3px solid var(--accent-yellow);
         }
 
-        .navbar{
-            display:flex;
-            justify-content:space-between;
-            align-items:center;
+        .top-bar div i {
+            color: var(--accent-yellow);
+            margin-right: 5px;
         }
 
-        .logo{
-            font-size:28px;
-            font-weight:bold;
+        /* Header & Navigation */
+        header {
+            background: var(--card-bg);
+            box-shadow: 0 4px 10px rgba(15, 48, 87, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 12px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
 
-        .logo span{
-            color:#ffc107;
+        .logo-container {
+            display: flex;
+            align-items: center;
+            gap: 15px;
         }
 
-        nav ul{
-            display:flex;
-            list-style:none;
-            gap:25px;
+        .logo-img {
+            height: 60px;
+            object-fit: contain;
         }
 
-        nav ul li a{
-            color:#fff;
-            text-decoration:none;
-            transition:.3s;
+        .brand-text h1 {
+            font-size: 1.6rem;
+            color: var(--primary-blue);
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
 
-        nav ul li a:hover{
-            color:#ffc107;
+        .brand-text p {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+            color: #555;
+            font-weight: 600;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--primary-blue);
+            font-weight: 600;
+            transition: all 0.3s;
+            padding: 5px 10px;
+            border-radius: 4px;
+        }
+
+        nav a:hover {
+            color: var(--text-dark);
+            background-color: var(--accent-yellow);
         }
 
         /* Hero Section */
-        .hero{
-            background:linear-gradient(rgba(0,0,0,.6),
-            rgba(0,0,0,.6)),
-            url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600')
-            center/cover no-repeat;
-
-            color:white;
-            text-align:center;
-            padding:140px 20px;
+        .hero {
+            background: linear-gradient(rgba(15, 48, 87, 0.9), rgba(10, 30, 60, 0.95)), 
+                        url('https://images.unsplash.com/photo-1541872703-74c5e44368f9?auto=format&fit=crop&w=1920&q=80') no-repeat center center/cover;
+            color: var(--text-light);
+            padding: 110px 5% 90px;
+            text-align: center;
+            border-bottom: 5px solid var(--accent-yellow);
         }
 
-        .hero h1{
-            font-size:52px;
-            margin-bottom:15px;
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            color: var(--accent-yellow);
         }
 
-        .hero p{
-            font-size:20px;
-            margin-bottom:25px;
+        .hero p {
+            font-size: 1.25rem;
+            max-width: 850px;
+            margin: 0 auto 35px;
+            font-weight: 300;
         }
 
-        .btn{
-            display:inline-block;
-            background:#ffc107;
-            color:#000;
-            padding:12px 28px;
-            text-decoration:none;
-            border-radius:5px;
-            font-weight:bold;
+        .btn-main {
+            background: var(--accent-yellow);
+            color: var(--primary-blue);
+            padding: 14px 35px;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1.05rem;
+            cursor: pointer;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: inline-block;
+            box-shadow: 0 4px 15px rgba(255, 201, 60, 0.4);
         }
 
-        /* Services */
-        .services{
-            padding:70px 0;
-            text-align:center;
+        .btn-main:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(255, 201, 60, 0.6);
+            background: #ffe082;
         }
 
-        .section-title{
-            font-size:36px;
-            margin-bottom:40px;
-            color:#0d2b52;
+        /* Sections General */
+        section {
+            padding: 70px 5%;
         }
 
-        .service-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:25px;
+        .section-title {
+            text-align: center;
+            font-size: 2.4rem;
+            color: var(--primary-blue);
+            margin-bottom: 45px;
+            position: relative;
         }
 
-        .service-card{
-            background:#f5f5f5;
-            padding:30px;
-            border-radius:10px;
-            box-shadow:0 3px 10px rgba(0,0,0,0.1);
+        .section-title::after {
+            content: '';
+            width: 80px;
+            height: 4px;
+            background: var(--accent-yellow);
+            position: absolute;
+            bottom: -12px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
-        .service-card h3{
-            margin-bottom:10px;
-            color:#0d2b52;
+        /* CEO Section Styles */
+        .ceo-section {
+            background: var(--card-bg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 50px;
+            flex-wrap: wrap;
+            box-shadow: inset 0 0 20px rgba(15, 48, 87, 0.02);
         }
 
-        /* About */
-        .about{
-            background:#eef3f8;
-            padding:70px 0;
-            text-align:center;
+        .ceo-card {
+            flex: 1;
+            min-width: 280px;
+            max-width: 350px;
+            text-align: center;
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(15, 48, 87, 0.08);
+            border-bottom: 5px solid var(--primary-blue);
         }
 
-        .about p{
-            max-width:900px;
-            margin:auto;
+        .ceo-img {
+            width: 180px;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 5px solid var(--accent-yellow);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 20px;
+        }
+
+        .ceo-info h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin-bottom: 5px;
+        }
+
+        .ceo-info p {
+            color: #777;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ceo-message {
+            flex: 2;
+            min-width: 320px;
+        }
+
+        .ceo-message blockquote {
+            font-size: 1.2rem;
+            color: #444;
+            font-style: italic;
+            position: relative;
+            padding-left: 30px;
+            border-left: 4px solid var(--accent-yellow);
+            margin-bottom: 20px;
+        }
+
+        .ceo-message p {
+            color: #555;
+            font-size: 1.05rem;
+            margin-bottom: 15px;
+        }
+
+        /* Services Grid */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .service-card {
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 5px 20px rgba(15, 48, 87, 0.05);
+            transition: all 0.3s;
+            border: 1px solid rgba(15, 48, 87, 0.05);
+            border-top: 4px solid var(--primary-blue);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-top: 4px solid var(--accent-yellow);
+            box-shadow: 0 10px 25px rgba(15, 48, 87, 0.12);
+        }
+
+        .service-card i {
+            font-size: 2.8rem;
+            color: var(--primary-blue);
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+
+        .service-card:hover i {
+            color: var(--accent-yellow);
+        }
+
+        /* Gallery/Cabin Grid */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 25px;
+        }
+
+        .gallery-item {
+            background: var(--card-bg);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            border: 1px solid #e1e8ed;
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 290px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.06);
+        }
+
+        .gallery-info {
+            padding: 18px;
+            text-align: center;
+            background: var(--card-bg);
+            border-top: 3px solid var(--accent-yellow);
+        }
+
+        .gallery-info h4 {
+            color: var(--primary-blue);
+            font-size: 1.1rem;
+        }
+
+        /* Cabin Box Styling */
+        .cabin-box {
+            height: 290px; 
+            background: linear-gradient(135deg, #1b497d, #0f3057); 
+            color: white; 
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+            font-weight: bold;
+            position: relative;
+        }
+
+        .cabin-box i {
+            font-size: 3.5rem; 
+            margin-bottom: 12px;
+            color: var(--accent-yellow);
+        }
+
+        .cabin-box .tag {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent-yellow);
+            color: var(--primary-blue);
+            padding: 3px 10px;
+            font-size: 0.75rem;
+            border-radius: 3px;
+            text-transform: uppercase;
+        }
+
+        /* Factory Section */
+        .factory-section {
+            background: var(--light-blue);
+            display: flex;
+            flex-wrap: wrap;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .factory-text {
+            flex: 1;
+            min-width: 320px;
+        }
+
+        .factory-text p {
+            font-size: 1.1rem;
+            color: #444;
+        }
+
+        .factory-images {
+            flex: 1;
+            min-width: 320px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+
+        .factory-images img {
+            width: 100%;
+            border-radius: 8px;
+            height: 160px;
+            object-fit: cover;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            border: 2px solid white;
+        }
+
+        /* Why Choose Us */
+        .why-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 20px;
+        }
+
+        .why-item {
+            background: var(--card-bg);
+            padding: 22px;
+            border-left: 5px solid var(--accent-yellow);
+            border-radius: 0 10px 10px 0;
+            box-shadow: 0 4px 10px rgba(15, 48, 87, 0.05);
+            font-weight: 600;
+            color: var(--primary-blue);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .why-item::before {
+            content: '\f058';
+            font-family: 'Font Awesome 6 Free';
+            color: var(--primary-blue);
+        }
+
+        /* Form Styling */
+        .form-container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: var(--card-bg);
+            padding: 45px;
+            border-radius: 14px;
+            box-shadow: 0 10px 35px rgba(15, 48, 87, 0.1);
+            border: 1px solid rgba(15, 48, 87, 0.08);
+        }
+
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 25px;
+            margin-bottom: 25px;
+        }
+
+        @media(max-width: 768px) {
+            .form-grid { grid-template-columns: 1fr; }
+            header { flex-direction: column; gap: 15px; text-align: center; }
+            nav ul { flex-wrap: wrap; justify-content: center; }
+            .ceo-section { flex-direction: column; text-align: center; }
+            .ceo-message blockquote { padding-left: 0; border-left: none; border-top: 3px solid var(--accent-yellow); padding-top: 15px; }
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: var(--primary-blue);
+        }
+
+        .form-group input, .form-group select, .form-group textarea {
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1rem;
+            transition: all 0.3s;
+        }
+
+        .form-group input:focus, .form-group select:focus, .form-group textarea:focus {
+            outline: none;
+            border-color: var(--primary-blue);
+            box-shadow: 0 0 0 3px rgba(15, 48, 87, 0.15);
+        }
+
+        .checkbox-group {
+            grid-column: 1 / -1;
+        }
+
+        .checkbox-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+
+        .checkbox-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.95rem;
+            cursor: pointer;
+        }
+
+        .checkbox-item input {
+            accent-color: var(--primary-blue);
+            width: 17px;
+            height: 17px;
         }
 
         /* Footer */
-        footer{
-            background:#0d2b52;
-            color:#fff;
-            padding:50px 0 20px;
+        footer {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            padding: 50px 5% 25px;
+            border-top: 5px solid var(--accent-yellow);
         }
 
-        .footer-grid{
-            display:grid;
-            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-            gap:30px;
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 40px;
+            margin-bottom: 35px;
         }
 
-        .footer-section h3{
-            margin-bottom:15px;
-            color:#ffc107;
+        .footer-col h3 {
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
+            font-size: 1.3rem;
+            position: relative;
         }
 
-        .footer-section ul{
-            list-style:none;
+        .footer-col p, .footer-col a {
+            color: #d1dbe5;
+            text-decoration: none;
+            margin-bottom: 12px;
+            display: block;
         }
 
-        .footer-section ul li{
-            margin-bottom:10px;
+        .footer-col a:hover {
+            color: var(--accent-yellow);
         }
 
-        .footer-section ul li a{
-            color:#fff;
-            text-decoration:none;
+        .footer-col i {
+            color: var(--accent-yellow);
+            margin-right: 8px;
         }
 
-        .copyright{
-            text-align:center;
-            margin-top:30px;
-            border-top:1px solid rgba(255,255,255,.2);
-            padding-top:15px;
+        .footer-bottom {
+            text-align: center;
+            padding-top: 25px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            font-size: 0.9rem;
+            color: #b0c4de;
+        }
+
+        /* Sticky Emergency Floating Button */
+        .emergency-float {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            background: #d32f2f;
+            color: white;
+            padding: 15px 22px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: transform 0.2s;
+        }
+
+        .emergency-float:hover {
+            transform: scale(1.05);
+            background: #b71c1c;
         }
     </style>
 </head>
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="container navbar">
-            <div class="logo">
-                Shivalik <span>Elevators</span>
-            </div>
+    <a href="tel:+919999086338" class="emergency-float">
+        <i class="fa-solid fa-phone-flip fa-spin"></i> 24x7 Emergency Support
+    </a>
 
-            <nav>
-                <ul>
-                    <li>#</li>
-                    <li>#</li>
-                    <li>#Services</a></li>
-                    <li>#</li>
-                    <li>#</li>
-                    <li>#</li>
-                </ul>
-            </nav>
+    <div class="top-bar">
+        <div><i class="fa-solid fa-clock"></i> Factory Hours: Mon - Sat (10:00 AM - 6:00 PM)</div>
+        <div>
+            <i class="fa-solid fa-envelope"></i> ShivalikElevators@gmail.com
         </div>
+    </div>
+
+    <header>
+        <div class="logo-container">
+            <img src="shivalik.png" alt="Shivalik Elevators Logo" class="logo-img">
+            <div class="brand-text">
+                <h1>SHIVALIK ELEVATORS</h1>
+                <p>Safe • Reliable • Premium Elevator Solutions</p>
+            </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#about-ceo">CEO Message</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Premium Gallery</a></li>
+                <li><a href="#factory">Our Factory</a></li>
+                <li><a href="#contact">Contact Us</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <!-- Hero -->
     <section class="hero">
-        <div class="container">
-            <h1>Trusted Elevator Solutions</h1>
-            <p>
-                Safe, Reliable & Modern Elevators for Residential,
-                Commercial and Industrial Buildings.
-            </p>
-            #Get Free Quote</a>
+        <h2>Welcome to Shivalik Elevators</h2>
+        <p>We have been providing modern, safe, and high-quality elevator solutions since 2012. In 2017, the company received official government approval. Today, we are a trusted name for Residential, Commercial, Hospital, Industrial, and Home Lift Solutions.</p>
+        <a href="#contact" class="btn-main"><i class="fa-solid fa-calendar-check"></i> Request a Free Consultation</a>
+    </section>
+
+    <section id="about-ceo" class="ceo-section">
+        <div class="ceo-card">
+            <img src="mohit.jpg" alt="Mohit - CEO Shivalik Elevators" class="ceo-img">
+            <div class="ceo-info">
+                <h3>Mohit</h3>
+                <p>Founder & CEO</p>
+            </div>
+        </div>
+        <div class="ceo-message">
+            <h2 class="section-title" style="text-align:left; justify-content:flex-start; padding-bottom:10px; margin-bottom:25px;">Leadership Message</h2>
+            <blockquote>
+                "Safety and trust define us. We don't just install elevators; we make your journey between floors completely safe and comfortable."
+            </blockquote>
+            <p>At Shivalik Elevators, our vision has always been to offer a perfect blend of Indian engineering and modern technology.
+            <p> This journey, which began in 2012, continues today, reflected in the smiles of hundreds of satisfied customers. We ensure premium finishing, rigorous safety testing, and timely delivery for every project, guaranteeing you a world-class vertical transportation experience.
         </div>
     </section>
 
-    <!-- Services -->
-    <section class="services">
-        <div class="container">
-            <h2 class="section-title">Our Services</h2>
+    <section id="services">
+        <h2 class="section-title">Our Services</h2>
+        <div class="services-grid">
+            <div class="service-card"><i class="fa-solid fa-users"></i><h3>Passenger Lift Installation</h3></div>
+            <div class="service-card"><i class="fa-solid fa-house"></i><h3>Home Lift</h3></div>
+            <div class="service-card"><i class="fa-solid fa-hospital"></i><h3>Hospital Lift</h3></div>
+            <div class="service-card"><i class="fa-solid fa-boxes-stacked"></i><h3>Goods Lift</h3></div>
+            <div class="service-card"><i class="fa-solid fa-screwdriver-wrench"></i><h3>Lift Modernization</h3></div>
+            <div class="service-card"><i class="fa-solid fa-gears"></i><h3>Lift Repair & Maintenance</h3></div>
+            <div class="service-card"><i class="fa-solid fa-file-contract"></i><h3>Annual Maintenance Contract (AMC)</h3></div>
+            <div class="service-card"><i class="fa-solid fa-dolly"></i><h3>Spare Parts Supply</h3></div>
+        </div>
+    </section>
 
-            <div class="service-grid">
-                <div class="service-card">
-                    <h3>Passenger Elevators</h3>
-                    <p>Modern and efficient passenger lift solutions.</p>
-                </div>
+    <section id="gallery" style="background: #f4f7f6;">
+        <h2 class="section-title">Premium Lift Gallery</h2>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="luxerylift.jpg" alt="Luxury Passenger Lift">
+                <div class="gallery-info"><h4>Luxury Passenger Lift</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="glasslift.jpg" alt="Glass Lift">
+                <div class="gallery-info"><h4>Glass Lift</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="Hospital-Elevator-1.webp" alt="Hospital Lift">
+                <div class="gallery-info"><h4>Hospital Lift</h4></div>
+            </div>
+            <div class="gallery-item">
+                <img src="elevatorsinstallation.webp" alt="Elevator Installation Site">
+                <div class="gallery-info"><h4>Installation Site</h4></div>
+            </div>
+        </div>
 
-                <div class="service-card">
-                    <h3>Hospital Elevators</h3>
-                    <p>Safe and spacious elevators for healthcare facilities.</p>
+        <h3 style="text-align: center; margin: 50px 0 25px; color: var(--primary-blue); font-size: 1.8rem;">
+            <i class="fa-solid fa-cubes" style="color:var(--accent-yellow)"></i> Premium Designer Cabin Panels (From Catalog)
+        </h3>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <div class="cabin-box">
+                    <span class="tag">Premium</span>
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>DESIGN AGBP-001</span>
                 </div>
-
-                <div class="service-card">
-                    <h3>Home Lifts</h3>
-                    <p>Elegant lifts designed for villas and residences.</p>
+                <div class="gallery-info"><p>Stainless Steel Etching Pattern</p></div>
+            </div>
+            <div class="gallery-item">
+                <div class="cabin-box">
+                    <span class="tag">Luxury Gold</span>
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>DESIGN AGBP-002</span>
                 </div>
-
-                <div class="service-card">
-                    <h3>Freight Elevators</h3>
-                    <p>Heavy-duty elevators for industrial and commercial use.</p>
+                <div class="gallery-info"><p>Gold Finish Designer Line Art</p></div>
+            </div>
+            <div class="gallery-item">
+                <div class="cabin-box">
+                    <span class="tag">Mirror Finish</span>
+                    <i class="fa-solid fa-border-all"></i>
+                    <span>DESIGN AGBP-003</span>
                 </div>
+                <div class="gallery-info"><p>Hairline Luxury Finish Panel</p></div>
+            </div>
+            <div class="gallery-item">
+                <div class="cabin-box" style="background: linear-gradient(135deg, #1f4068, #162447);">
+                    <span class="tag" style="background:#fff; color:#111;">Spiritual</span>
+                    <i class="fa-solid fa-om" style="color: var(--accent-yellow);"></i>
+                    <span style="font-size: 1.2rem; letter-spacing: 1px;">राधे राधे</span>
+                    <span style="font-size:0.8rem; opacity:0.8;">DESIGN AGBP-045</span>
+                </div>
+                <div class="gallery-info"><p>Custom Devotional Spiritual Laser Art</p></div>
             </div>
         </div>
     </section>
 
-    <!-- About -->
-    <section class="about">
-        <div class="container">
-            <h2 class="section-title">About Shivalik Elevators</h2>
-
-            <p>
-                Shivalik Elevators is a leading provider of elevator
-                installation, maintenance, modernization, and support
-                services. We deliver high-quality elevator systems
-                with a strong focus on safety, reliability, and
-                customer satisfaction.
-            </p>
+    <section id="factory" class="factory-section">
+        <div class="factory-text">
+            <h2 class="section-title" style="text-align:left; justify-content:flex-start; padding-bottom:10px;">🏭 Our Factory</h2>
+            <p>High-quality elevator solutions are manufactured at the Shivalik Elevators factory with the help of modern machinery and experienced engineers. Each project is designed and tested in accordance with quality and safety standards.</p>
+        </div>
+        <div class="factory-images">
+            <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&w=400&q=80" alt="Factory Machine">
+            <img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=400&q=80" alt="Engineers Working">
+            <img src="cutsheet.webp" alt="cutsheet.webp">
+            <img src="https://images.unsplash.com/photo-1504917595217-d4dc5ebe6122?auto=format&fit=crop&w=400&q=80" alt="Quality Test">
         </div>
     </section>
 
-    <!-- Footer -->
+    <section>
+        <h2 class="section-title">Why Choose Shivalik Elevators?</h2>
+        <div class="why-grid">
+            <div class="why-item">10+ years of experience</div>
+            <div class="why-item">Team of experienced engineers</div>
+            <div class="why-item">Modern Technology</div>
+            <div class="why-item">High Safety Standards</div>
+            <div class="why-item">Timely Installation</div>
+            <div class="why-item">Affordable Pricing</div>
+            <div class="why-item">Fast Service Support</div>
+            <div class="why-item">Customer Satisfaction is Our Priority</div>
+        </div>
+    </section>
+
+    <section id="contact" style="background: var(--light-blue);">
+        <div class="form-container">
+            <h2 style="text-align:center; color:var(--primary-blue); margin-bottom:10px;">Contact Form</h2>
+            <p style="text-align:center; margin-bottom:35px; color:#555;">     </p>
+            
+            <form id="liftRequestForm">
+                <div class="form-grid">
+                    <div class="form-group">
+                        <label>Full Name *</label>
+                        <input type="text" required placeholder="Write your full name.">
+                    </div>
+                    <div class="form-group">
+                        <label>Mobile Number *</label>
+                        <input type="tel" required placeholder="Enter your mobile number.">
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" placeholder="Enter your email address.">
+                    </div>
+                    <div class="form-group">
+                        <label>Company Name (Optional)</label>
+                        <input type="text" placeholder="Enter your company name.">
+                    </div>
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label>Complete Address</label>
+                        <input type="text" placeholder="Enter your complete address.">
+                    </div>
+                    <div class="form-group">
+                        <label>City</label>
+                        <input type="text" placeholder="Enter your city.">
+                    </div>
+                    <div class="form-group">
+                        <label>State</label>
+                        <input type="text" placeholder="Enter your state.">
+                    </div>
+                    <div class="form-group">
+                        <label>PIN Code</label>
+                        <input type="text" placeholder="Enter your PIN code.">
+                    </div>
+
+                    <div class="checkbox-group">
+                        <label>Select Service Required *</label>
+                        <div class="checkbox-grid">
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="New Installation"> New Lift Installation</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Home Lift"> Home Lift</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Passenger Lift"> Passenger Lift</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Hospital Lift"> Hospital Lift</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Goods Lift"> Goods Lift</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Maintenance"> Lift Maintenance</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="AMC"> AMC</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Repair"> Lift Repair</div>
+                            <div class="checkbox-item"><input type="checkbox" name="srv" value="Spare Parts"> Spare Parts</div>
+                        </div>
+                    </div>
+
+                    <div class="form-group" style="grid-column: 1 / -1;">
+                        <label>Message</label>
+                        <textarea rows="4" placeholder="Enter your requirements here..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-camera"></i> Upload Building Photo</label>
+                        <input type="file" accept="image/*">
+                    </div>
+                    <div class="form-group">
+                        <label><i class="fa-solid fa-elevator"></i> Upload Lift Photo (If a lift is already installed)</label>
+                        <input type="file" accept="image/*">
+                    </div>
+                </div>
+
+                <div style="text-align:center; margin-top: 15px;">
+                    <button type="submit" class="btn-main" style="width:100%; font-size:1.1rem; padding: 16px;">Request a Free Consultation</button>
+                </div>
+            </form>
+        </div>
+    </section>
+
     <footer>
-        <div class="container">
-
-            <div class="footer-grid">
-
-                <div class="footer-section">
-                    <h3>Shivalik Elevators</h3>
-                    <p>
-                        Delivering innovative elevator solutions
-                        with superior safety and performance.
-                    </p>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Quick Links</h3>
-                    <ul>
-                        <li>#</li>
-                        <li>#About Us</a></li>
-                        <li>#</li>
-                        <li>#</li>
-                        <li>#</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Services</h3>
-                    <ul>
-                        <li>Passenger Elevators</li>
-                        <li>Hospital Elevators</li>
-                        <li>Home Lifts</li>
-                        <li>Freight Elevators</li>
-                        <li>AMC Maintenance</li>
-                    </ul>
-                </div>
-
-                <div class="footer-section">
-                    <h3>Contact Us</h3>
-                    <p>📍 Ghaziabad, Uttar Pradesh</p>
-                    <p>📞 +91 98765 43210</p>
-                    <p>✉ info@shivalikelevators.com</p>
-                </div>
-
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h3>Shivalik Elevators</h3>
+                <p></p>Dedicated to service. Modern, safe, and premium elevator solutions.</p>
+                <p style="color:var(--accent-yellow); font-weight:600; font-style: italic; font-size: 1.1rem; margin-top: 15px;">"We Lift Your Dreams with Trust."</p>
             </div>
-
-            <div class="copyright">
-                © 2026 Shivalik Elevators. All Rights Reserved.
+            <div class="footer-col">
+                <h3>Contact Info</h3>
+                <p><i class="fa-solid fa-location-dot"></i>  Office, Block C, Gali 3/99, Siddharth Vihar, Vijay Nagar, Ghaziabad, Uttar Pradesh - 201009.</p>
+                <p><i class="fa-solid fa-phone"></i> +91 99990 86338</p>
+                <p><i class="fa-solid fa-phone"></i> +91 99991 86338</p>
+                <p><i class="fa-solid fa-envelope"></i> ShivalikElevators@gmail.com</p>
             </div>
-
+            <div class="footer-col">
+                <h3>Our Promise</h3>
+                <p><i class="fa-solid fa-check"></i> Quality</p>
+                <p><i class="fa-solid fa-check"></i> Safety</p>
+                <p><i class="fa-solid fa-check"></i> Innovation</p>
+                <p><i class="fa-solid fa-check"></i> Customer Satisfaction</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Shivalik Elevators. All Rights Reserved. Govt Approved Company since 2017.
         </div>
     </footer>
 
+    <script>
+        document.getElementById('liftRequestForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert("Thank you! The Shivalik Elevators team has received your request. Our team will contact you soon.");
+            this.reset();
+        });
+    </script>
 </body>
 </html>
+
