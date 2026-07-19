@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shivalik Elevators</title>
+
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        body{
+            line-height:1.6;
+            color:#333;
+        }
+
+        .container{
+            width:90%;
+            max-width:1200px;
+            margin:auto;
+        }
+
+        /* Header */
+        header{
+            background:#0d2b52;
+            color:#fff;
+            padding:15px 0;
+            position:sticky;
+            top:0;
+            z-index:999;
+        }
+
+        .navbar{
+            display:flex;
+            justify-content:space-between;
+            align-items:center;
+        }
+
+        .logo{
+            font-size:28px;
+            font-weight:bold;
+        }
+
+        .logo span{
+            color:#ffc107;
+        }
+
+        nav ul{
+            display:flex;
+            list-style:none;
+            gap:25px;
+        }
+
+        nav ul li a{
+            color:#fff;
+            text-decoration:none;
+            transition:.3s;
+        }
+
+        nav ul li a:hover{
+            color:#ffc107;
+        }
+
+        /* Hero Section */
+        .hero{
+            background:linear-gradient(rgba(0,0,0,.6),
+            rgba(0,0,0,.6)),
+            url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=1600')
+            center/cover no-repeat;
+
+            color:white;
+            text-align:center;
+            padding:140px 20px;
+        }
+
+        .hero h1{
+            font-size:52px;
+            margin-bottom:15px;
+        }
+
+        .hero p{
+            font-size:20px;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            display:inline-block;
+            background:#ffc107;
+            color:#000;
+            padding:12px 28px;
+            text-decoration:none;
+            border-radius:5px;
+            font-weight:bold;
+        }
+
+        /* Services */
+        .services{
+            padding:70px 0;
+            text-align:center;
+        }
+
+        .section-title{
+            font-size:36px;
+            margin-bottom:40px;
+            color:#0d2b52;
+        }
+
+        .service-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:25px;
+        }
+
+        .service-card{
+            background:#f5f5f5;
+            padding:30px;
+            border-radius:10px;
+            box-shadow:0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .service-card h3{
+            margin-bottom:10px;
+            color:#0d2b52;
+        }
+
+        /* About */
+        .about{
+            background:#eef3f8;
+            padding:70px 0;
+            text-align:center;
+        }
+
+        .about p{
+            max-width:900px;
+            margin:auto;
+        }
+
+        /* Footer */
+        footer{
+            background:#0d2b52;
+            color:#fff;
+            padding:50px 0 20px;
+        }
+
+        .footer-grid{
+            display:grid;
+            grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+            gap:30px;
+        }
+
+        .footer-section h3{
+            margin-bottom:15px;
+            color:#ffc107;
+        }
+
+        .footer-section ul{
+            list-style:none;
+        }
+
+        .footer-section ul li{
+            margin-bottom:10px;
+        }
+
+        .footer-section ul li a{
+            color:#fff;
+            text-decoration:none;
+        }
+
+        .copyright{
+            text-align:center;
+            margin-top:30px;
+            border-top:1px solid rgba(255,255,255,.2);
+            padding-top:15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container navbar">
+            <div class="logo">
+                Shivalik <span>Elevators</span>
+            </div>
+
+            <nav>
+                <ul>
+                    <li>#</li>
+                    <li>#</li>
+                    <li>#Services</a></li>
+                    <li>#</li>
+                    <li>#</li>
+                    <li>#</li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
+        <div class="container">
+            <h1>Trusted Elevator Solutions</h1>
+            <p>
+                Safe, Reliable & Modern Elevators for Residential,
+                Commercial and Industrial Buildings.
+            </p>
+            #Get Free Quote</a>
+        </div>
+    </section>
+
+    <!-- Services -->
+    <section class="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+
+            <div class="service-grid">
+                <div class="service-card">
+                    <h3>Passenger Elevators</h3>
+                    <p>Modern and efficient passenger lift solutions.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Hospital Elevators</h3>
+                    <p>Safe and spacious elevators for healthcare facilities.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Home Lifts</h3>
+                    <p>Elegant lifts designed for villas and residences.</p>
+                </div>
+
+                <div class="service-card">
+                    <h3>Freight Elevators</h3>
+                    <p>Heavy-duty elevators for industrial and commercial use.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section class="about">
+        <div class="container">
+            <h2 class="section-title">About Shivalik Elevators</h2>
+
+            <p>
+                Shivalik Elevators is a leading provider of elevator
+                installation, maintenance, modernization, and support
+                services. We deliver high-quality elevator systems
+                with a strong focus on safety, reliability, and
+                customer satisfaction.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+
+            <div class="footer-grid">
+
+                <div class="footer-section">
+                    <h3>Shivalik Elevators</h3>
+                    <p>
+                        Delivering innovative elevator solutions
+                        with superior safety and performance.
+                    </p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li>#</li>
+                        <li>#About Us</a></li>
+                        <li>#</li>
+                        <li>#</li>
+                        <li>#</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Services</h3>
+                    <ul>
+                        <li>Passenger Elevators</li>
+                        <li>Hospital Elevators</li>
+                        <li>Home Lifts</li>
+                        <li>Freight Elevators</li>
+                        <li>AMC Maintenance</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Us</h3>
+                    <p>📍 Ghaziabad, Uttar Pradesh</p>
+                    <p>📞 +91 98765 43210</p>
+                    <p>✉ info@shivalikelevators.com</p>
+                </div>
+
+            </div>
+
+            <div class="copyright">
+                © 2026 Shivalik Elevators. All Rights Reserved.
+            </div>
+
+        </div>
+    </footer>
+
+</body>
+</html>
